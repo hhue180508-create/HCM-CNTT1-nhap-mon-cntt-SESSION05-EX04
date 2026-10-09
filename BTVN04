@@ -1,0 +1,28 @@
+BÀI LÀM: SO SÁNH ABSOLUTE PATH VÀ RELATIVE PATH
+Phần 1: Bảng so sánh
+Tiêu chí
+Absolute Path (Đường dẫn tuyệt đối)
+Relative Path (Đường dẫn tương đối)
+Ví dụ
+C:\Users\An-K26\FarmProject\data\logs.csv
+../data/logs.csv
+Độ dài
+Thường dài hơn, chứa đầy đủ đường dẫn từ ổ đĩa.
+Thường ngắn gọn hơn, dựa vào vị trí hiện tại của chương trình.
+Tính di động
+Thấp hơn, có thể bị lỗi khi gửi dự án cho người khác vì tên người dùng, ổ đĩa hoặc vị trí thư mục khác nhau.
+Cao hơn, có thể chạy trên máy khác nếu cấu trúc thư mục dự án được giữ nguyên.
+
+Phần 2: Lựa chọn giải pháp tối ưu
+Em chọn Relative Path (../data/logs.csv) vì đường dẫn ngắn gọn và có tính di động cao hơn khi chia sẻ dự án cho người khác.
+Ý nghĩa của ký hiệu ..:
+Ký hiệu .. có nghĩa là thư mục cha, tức là lùi lên một cấp thư mục so với vị trí hiện tại.
+Ví dụ, nếu cấu trúc dự án như sau:
+FarmProject/
+├── data/
+│   └── logs.csv
+└── src/
+    └── main.py
+Từ file main.py trong thư mục src, đường dẫn ../data/logs.csv sẽ đi lên thư mục cha FarmProject, sau đó đi vào data để tìm file logs.csv.
+Kết luận: Relative Path là lựa chọn phù hợp hơn khi phát triển và chia sẻ dự án Python, vì không phụ thuộc vào tên người dùng hay đường dẫn cố định trên một máy tính.
+
